@@ -9,6 +9,8 @@ import { DATA } from "@/data/resume";
 import IconCloud from "@/components/ui/icon-cloud";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import Marquee from "@/components/ui/marquee";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -112,12 +114,12 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
-                href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                description={education.description}
               />
             </BlurFade>
           ))}
@@ -128,7 +130,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex justify-center flex-wrap gap-1">
             <IconCloud iconSlugs={DATA.skills.map(s => s.slug)}/>
           </div>
           <div className="flex flex-wrap gap-1">
@@ -140,6 +142,21 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* <section id="endorsments">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Endorsments</h2>
+          </BlurFade>
+          <div className="flex justify-center flex-wrap gap-1">
+            <Marquee pauseOnHover className="[--duration:20s]">
+              <div>Test</div>
+            </Marquee>
+            <Marquee pauseOnHover className="[--duration:20s]">
+              <div>Test2</div>
+            </Marquee>
+          </div>
+        </div>
+      </section> */}
       <section id="publications">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -160,7 +177,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {/* {DATA.researchPublications.map((project, id) => (
+            {DATA.publications.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -170,18 +187,18 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
-                  dates={project.dates}
+                  conference={project.conference}
                   tags={project.technologies}
                   image={project.image}
-                  video={project.video}
+                  video={project.video ?? undefined}
                   links={project.links}
                 />
               </BlurFade>
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
-      <section id="projects">
+      {/* <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -221,71 +238,48 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="hackathons">
+      </section> */}
+      <section id="endorsments">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
+                  Endorsments
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  I love when I can make a difference
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  Throughout my freelancing experience and industry experience,
+                  I was able to make a difference in multiple places and people.
+                  Here are some endorsments and feedback I received.
                 </p>
               </div>
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
+              
                 <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                  delay={BLUR_FADE_DELAY * 15 + 1 * 0.05}
                 >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
+                  <Marquee pauseOnHover className="[--duration:20s]">
+                    <div>Test</div>
+                  </Marquee>
+                  <Marquee pauseOnHover className="[--duration:20s]">
+                    <div>Test2</div>
+                  </Marquee>
                 </BlurFade>
-              ))}
             </ul>
           </BlurFade>
         </div>
       </section>
-      <section id="contact">
+      <section id="cv">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-              {/* <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
-              </p> */}
+              <RainbowButton>Download CV</RainbowButton>
             </div>
           </BlurFade>
         </div>

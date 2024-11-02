@@ -210,19 +210,77 @@ export const DATA = {
   education: [
     {
       school: "University of Moratuwa",
-      href: "https://uom.lk",
       degree: "Bachelor of the Science of Engineering (Hons.)",
       logoUrl: "/buildspace.jpg",
       start: "Nov 2018",
-      end: "July 2023"
+      end: "July 2023",
+      description: "I earned a Bachelor of Science in Engineering with Honors from the University of Moratuwa, specializing in Computer Science and Engineering. Graduating with a GPA of 3.60/4.20, I achieved a Second Class Upper Division standing, reflecting a strong academic performance throughout the program. This rigorous education equipped me with a solid foundation in engineering principles and technical expertise essential for the field.",
     },
     {
       school: " Dharmasoka College",
-      href: "https://dharmasokacollege.lk",
       degree: "GCE Advanced Level (A/L)",
       logoUrl: "/waterloo.png",
       start: "Aug 2015",
-      end: "Aug 2017"
+      end: "Aug 2017",
+      description: "I completed my GCE Advanced Level (A/L) Examination at Dharmasoka College in Ambalangoda, Sri Lanka, in the Physical Science stream, focusing on Combined Mathematics, Physics, and Chemistry. Achieving 3 A passes, I secured a Z-Score of 2.2741, ranking 115th nationally and 13th in the district, demonstrating strong academic performance and commitment to excellence in science."
+    },
+  ],
+  publications: [
+    {
+      title: "Re-evaluating keystroke dynamics for continuous authentication",
+      href: "https://ieeexplore.ieee.org/document/10145743",
+      conference: "ICARC 2023",
+      active: true,
+      description:
+        "This research paper evaluates mobile continuous authentication systems using keystroke dynamics, emphasizing the need for both traditional and continuous metrics for comprehensive assessment.",
+      technologies: [
+        "Machine Learning",
+        "Deep Learning",
+        "Biometrics",
+        "Keras",
+        "Tensorflow"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://ieeexplore.ieee.org/document/10145743",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: {
+        isYouTube: true,
+        src: "https://www.youtube.com/embed/HHe2L-cXab8"
+      }
+    },
+    {
+      title: "BehaveFormer: A Framework with STDAT for IMU enhanced Keystroke Dynamics",
+      href: "https://www.researchgate.net/publication/372487705_BehaveFormer_A_Framework_with_Spatio-Temporal_Dual_Attention_Transformers_for_IMU_enhanced_Keystroke_Dynamics",
+      conference: "IJCB 2023",
+      active: true,
+      description:
+        "BehaveFormer is a new system for Continuous Authentication (CA) that combines keystroke and IMU sensor data to improve accuracy. With its advanced transformer model (STDAT), it outperforms existing CA methods, ensuring secure, continuous user verification.",
+      technologies: [
+        "Machine Learning",
+        "Deep Learning",
+        "Biometrics",
+        "Keras",
+        "Tensorflow"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.researchgate.net/publication/372487705_BehaveFormer_A_Framework_with_Spatio-Temporal_Dual_Attention_Transformers_for_IMU_enhanced_Keystroke_Dynamics",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/DilshanSenarath/BehaveFormer",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/behaveformer.png",
+      video: null
     },
   ],
   projects: [
@@ -251,8 +309,10 @@ export const DATA = {
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: {
+        isYouTube: false,
+        src: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4"
+      }
     },
     {
       title: "Magic UI",
@@ -284,7 +344,10 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: {
+        isYouTube: false,
+        src: "https://cdn.magicui.design/bento-grid.mp4"
+      }
     },
     {
       title: "llm.report",
@@ -317,7 +380,10 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: {
+        isYouTube: false,
+        src: "https://cdn.llm.report/openai-demo.mp4"
+      }
     },
     {
       title: "Automatic Chat",
@@ -345,8 +411,11 @@ export const DATA = {
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: {
+        isYouTube: false,
+        src: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4"
+      }
+        
     },
   ],
   hackathons: [

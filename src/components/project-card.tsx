@@ -11,15 +11,21 @@ import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
+interface Video{
+  isYouTube: boolean;
+  src: string;
+}
+
 interface Props {
   title: string;
   href?: string;
+  conference?: string;
   description: string;
-  dates: string;
+  dates?: string;
   tags: readonly string[];
   link?: string;
   image?: string;
-  video?: string;
+  video?: Video;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -31,6 +37,7 @@ interface Props {
 export function ProjectCard({
   title,
   href,
+  conference,
   description,
   dates,
   tags,
@@ -46,34 +53,44 @@ export function ProjectCard({
         "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
-      >
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+      {video && video.isYouTube ? (
+        <div className={cn("block cursor-pointer", className)}>
+          <iframe
+            src={video.src}
+            allow="autoplay; loop; muted; playsinline"
+            className="mx-auto h-40 w-full object-cover object-top"
+            frameBorder="0"
+            allowFullScreen
+            title="Embedded YouTube video"
           />
-        )}
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
-      </Link>
+        </div>
+      ) : (
+        <Link href={href || "#"} className={cn("block cursor-pointer", className)}>
+          {video && (
+            <video
+              src={video.src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            />
+          )}
+          {image && (
+            <Image
+              src={image}
+              alt={title}
+              width={500}
+              height={300}
+              className="h-40 w-full overflow-hidden object-cover object-top"
+            />
+          )}
+        </Link>
+      )}
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
+          <time className="font-sans text-xs">{conference || dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
