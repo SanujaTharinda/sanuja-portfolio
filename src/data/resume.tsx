@@ -14,7 +14,7 @@ export const DATA = {
     in Computer Science and Engineering. My primary passions lie in software development and machine
     learning, and I firmly believe in their potential to address diverse real-world challenges. Ultimately, My
     objective is to pursue a career that provides opportunities to contribute meaningfully to these fields.`,
-  avatarUrl: "/me.jpg",
+  avatarUrl: "/me.png",
   skills: [
     {
       slug: "springboot",
