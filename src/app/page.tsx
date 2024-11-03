@@ -304,7 +304,7 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <a href="/Sanuja_Thrainda.pdf" download="Sanuja Thrainda_CV.pdf">
+              <a href="/Sanuja_Tharinda_CV.pdf" download="Sanuja Thrainda_CV.pdf">
                 <RainbowButton>Download CV</RainbowButton>
               </a>
             </div>
