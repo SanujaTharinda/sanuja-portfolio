@@ -1,13 +1,13 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function CVForm() {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
 
-    const handleEmailChange = (e) => {
+    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
         if (error) setError(''); // Clear error on input change
     };
