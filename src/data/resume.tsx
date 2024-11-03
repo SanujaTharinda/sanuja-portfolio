@@ -162,7 +162,7 @@ export const DATA = {
       badges: [],
       location: "DHPL, 11th, 42 Nawam Mawatha, 00200",
       title: "Software Engineer",
-      logoUrl: "/atomic.png",
+      logoUrl: "/ironone.jpg",
       start: "Aug 2023",
       end: "Present",
       description:
@@ -173,8 +173,8 @@ export const DATA = {
       badges: [],
       href: "https://www.lseg.com/",
       location: "01 Millennium Dr, Malabe",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
+      title: "Software Engineer Intern",
+      logoUrl: "/lseg.jpg",
       start: "Dec 2021",
       end: "Jun 2022",
       description:
@@ -186,7 +186,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Part time Software Developer",
-      logoUrl: "/nvidia.png",
+      logoUrl: "/hashbaze.jpg",
       start: "Mar 2021",
       end: "Nov 2021",
       description:
@@ -200,7 +200,7 @@ export const DATA = {
       href: "https://uom.lk",
       location: "Bandaranayake Mawatha, Moratuwa 10400",
       title: "Undergraduate Research Student",
-      logoUrl: "/shopify.svg",
+      logoUrl: "/mora.jpg",
       start: "Jun 2022",
       end: "Jun 2023",
       description:
@@ -211,7 +211,7 @@ export const DATA = {
     {
       school: "University of Moratuwa",
       degree: "Bachelor of the Science of Engineering (Hons.)",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "/mora.jpg",
       start: "Nov 2018",
       end: "July 2023",
       description: "I earned a Bachelor of Science in Engineering with Honors from the University of Moratuwa, specializing in Computer Science and Engineering. Graduating with a GPA of 3.60/4.20, I achieved a Second Class Upper Division standing, reflecting a strong academic performance throughout the program. This rigorous education equipped me with a solid foundation in engineering principles and technical expertise essential for the field.",
@@ -219,7 +219,7 @@ export const DATA = {
     {
       school: " Dharmasoka College",
       degree: "GCE Advanced Level (A/L)",
-      logoUrl: "/waterloo.png",
+      logoUrl: "/dharmasoka.png",
       start: "Aug 2015",
       end: "Aug 2017",
       description: "I completed my GCE Advanced Level (A/L) Examination at Dharmasoka College in Ambalangoda, Sri Lanka, in the Physical Science stream, focusing on Combined Mathematics, Physics, and Chemistry. Achieving 3 A passes, I secured a Z-Score of 2.2741, ranking 115th nationally and 13th in the district, demonstrating strong academic performance and commitment to excellence in science."
