@@ -207,6 +207,31 @@ export const DATA = {
         'In a group project titled "Enhancing Behavioural Biometrics with IMU Data," we developed an innovative continuous authentication system using advanced keystroke dynamics for improved security. We evaluated state-of-the-art continuous authentication methods and introduced the Spatio-Temporal Dual Attention Transformer (STDAT), a novel transformer model that became the core of BehaveFormer, our multi-modal architecture. BehaveFormer integrates both keystroke dynamics and IMU data, enabling more robust authentication. To showcase our model’s potential, we built a smartphone prototype for continuous, biometric-based security.'
     }
   ],
+  freelance: [
+    {
+      platform: "Fiverr",
+      badges: [],
+      href: "https://www.fiverr.com",
+      location: "Remote",
+      title: "Freelancer",
+      logoUrl: "/fiverr.png",
+      start: "",
+      end: "",
+      description:
+        'Through successful software development, I was able to obtain Level 2 seller.'
+    },
+    {
+      platform: "PeoplePerHour",
+      badges: [],
+      href: "https://www.peopleperhour.com",
+      location: "Remote",
+      title: "Freelancer",
+      logoUrl: "/peopleperhour.svg",
+      start: "",
+      end: "",
+      description: ''
+    }
+  ],
   education: [
     {
       school: "University of Moratuwa",
