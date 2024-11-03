@@ -115,16 +115,16 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" }
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" }
   ],
   contact: {
     email: "sanuja.18@cse.mrt.ac.lk",
     tel: "+94712111663",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/SanujaTharinda",
-        icon: Icons.github,
+      Email: {
+        name: "Email",
+        url: "mailto:sanuja.18@cse.mrt.ac.lk",
+        icon: Icons.email,
         navbar: true
       },
       LinkedIn: {
@@ -133,25 +133,18 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true
       },
-      // XX: {
-      //   name: "X",
-      //   url: "https://dub.sh/dillion-twitter",
-      //   icon: Icons.x,
-
-      //   navbar: true,
-      // },
-      // Youtube: {
-      //   name: "Youtube",
-      //   url: "https://dub.sh/dillion-youtube",
-      //   icon: Icons.youtube,
-      //   navbar: true,
-      // },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-        navbar: false
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/SanujaTharinda",
+        icon: Icons.github,
+        navbar: true
       },
+      Instagram: {
+        name: "Instagram",
+        url: "https://www.instagram.com/sanujatharinda",
+        icon: Icons.instagram,
+        navbar: true
+      }
     },
   },
 
